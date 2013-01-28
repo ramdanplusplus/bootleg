@@ -1,7 +1,9 @@
 module Href
   def all
     pages = []
-    count.times { |nr| pages << url + nr.to_s }
+    if count
+      count.times { |nr| pages << url + nr.to_s }
+    end
     pages
   end
 
