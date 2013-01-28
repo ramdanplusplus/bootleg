@@ -8,7 +8,7 @@ module Href
   private
 
   def count
-    self.links.select { |link| link.text.size < 3 and link.text =~ /\d/ }.last.text.to_i
+    #self.links.select { |link| link.text.size < 3 and link.text =~ /\d/ }.last.text.to_i
   end
 
   def url
