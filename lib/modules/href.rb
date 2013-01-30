@@ -10,7 +10,7 @@ module Href
   private
 
   def count
-    links = self.links.flatten.compact.select { |link| link.text.size < 3 and link.text =~ /\d/  }
+    links = self.links.flatten.compact #.select { |link| link.text.size < 3 and link.text =~ /\d/  }
     links.empty? ? nil : links.last.text.to_i
     # self.links.each do |link|
     #   if link
