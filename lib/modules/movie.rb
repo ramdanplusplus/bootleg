@@ -4,7 +4,8 @@ module Movie
   end
 
   def link
-    "http://www.moviefone.com" + details.css('a').attribute('href').value
+    #"http://www.moviefone.com" + details.css('a').attribute('href').value
+    details.css('a').attribute('href').value
   end
 
   def showtimes
