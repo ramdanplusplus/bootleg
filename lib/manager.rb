@@ -15,7 +15,7 @@ class Manager
   end
 
   def find_pages
-     Manager.zipcode = @zipcode
+    Manager.zipcode = @zipcode
     Finder.new(@zipcode).hrefs
   end
 
