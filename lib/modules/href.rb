@@ -23,7 +23,7 @@ module Href
   def url
     #self.uri.to_s + '?page='
     #"http://www.moviefone.com/showtimes/albany-ny/#{Manager.zipcode}/theaters?page="
-    self.uri.to_s
+    self.uri.to_s + '?page='
   end
 end
 
