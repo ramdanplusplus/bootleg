@@ -10,6 +10,6 @@ class Finder
 
   def hrefs
     @href.extend Href
-    @href.all("12201")
+    @href.all
   end
 end
