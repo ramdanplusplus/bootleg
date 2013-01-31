@@ -1,8 +1,8 @@
 module Href
-  def all
+  def all(zipcode)
     pages = []
     if count
-      count.times { |nr| pages << url + (nr + 1).to_s }
+      count.times { |nr| pages << url(zipcode) + (nr + 1).to_s }
     end
     pages.map{|pa| puts pa}
     pages
@@ -20,9 +20,9 @@ module Href
 
   end
 
-  def url
+  def url(zipcode)
     #self.uri.to_s + '?page='
-    "http://www.moviefone.com/showtimes/albany-ny/12201/theaters?page="
+    "http://www.moviefone.com/showtimes/albany-ny/#{zipcode}/theaters?page="
   end
 end
 
