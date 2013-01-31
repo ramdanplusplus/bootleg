@@ -5,6 +5,7 @@ class CreateBootlegShowtimes < ActiveRecord::Migration
       t.integer     :bootleg_theater_id
       t.string      :zipcode
       t.string      :showtimes
+      t.datetime    :date
 
       t.timestamps
     end

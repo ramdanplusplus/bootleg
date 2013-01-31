@@ -34,12 +34,12 @@ module Theater
       showtime.bootleg_movie_id = existing_movie.id
       showtime.save
     else
-      theater.movies.create!(name: movie.name, href: movie.link)
+      theater.movies.create!(name: movie.name, href: movie.link, cover_url: movie.cover_url)
     end
     showtime = BootlegShowtime.last
     showtime.showtimes = movie.showtimes.to_s.gsub(/-/, '').gsub(/\n/,'').strip
     showtime.zipcode = Manager.zipcode
-    #showtime.date = Time.zone.now
+    showtime.date = Time.zone.now
     showtime.save
   end
 end

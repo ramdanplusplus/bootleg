@@ -8,6 +8,10 @@ module Movie
     details.css('a').attribute('href').value
   end
 
+  def cover_url
+    self.css('div.moviePoster').css('img').attribute('src').value
+  end
+
   def showtimes
     values = []
     showtimes = self.css('a.gt').empty? ? self.css('span.stDisplay') : self.css('a.gt')
