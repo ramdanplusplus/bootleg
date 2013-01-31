@@ -24,7 +24,7 @@ module Theater
 
   private
   def details
-    self.css('h3.title').css('a')
+    self.css('div.title').css('a')
   end
 
   def insert_movies(theater, movie)
