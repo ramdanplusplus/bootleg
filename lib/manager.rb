@@ -20,9 +20,13 @@ class Manager
   end
 
   def extract_theaters
-    @pages.each do |page|
-      @all_theaters << Extractor.new(page, @zipcode).page_theaters
+    if @pages
+      @pages.each do |page|
+        @all_theaters << Extractor.new(page, @zipcode).page_theaters
+      end
+      return @all_theaters.flatten
+    else
+      return nil
     end
-    @all_theaters.flatten
   end
 end

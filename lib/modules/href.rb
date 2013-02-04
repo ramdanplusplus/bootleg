@@ -4,7 +4,6 @@ module Href
     if count
       count.times { |nr| pages << url + (nr + 1).to_s }
     end
-    pages.map{|pa| puts pa}
     pages
   end
 
@@ -12,7 +11,7 @@ module Href
 
   def count
     # links = self.links.flatten.compact.select { |link| link.text.size < 3 and link.text =~ /\d/  }
-    self.search("span").css(".page-status").first.text.last.to_i
+    self.search("span").css(".page-status").first.text.last.to_i resque nil
   end
 
   def url
