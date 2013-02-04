@@ -11,7 +11,7 @@ module Href
 
   def count
     # links = self.links.flatten.compact.select { |link| link.text.size < 3 and link.text =~ /\d/  }
-    self.search("span").css(".page-status").first.text.last.to_i resque nil
+    self.search("span").css(".page-status").first.text.last.to_i rescue nil
   end
 
   def url
