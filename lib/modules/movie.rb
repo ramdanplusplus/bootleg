@@ -9,7 +9,7 @@ module Movie
   end
 
   def cover_url
-    self.css('div.moviePoster').css('img').attribute('src').value
+    self.css('div.moviePoster').css('img').attribute('data-src').value
   end
 
   def showtimes
