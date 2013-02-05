@@ -13,7 +13,7 @@ class Manager
     @pages ||= find_pages
     @all_theaters = []
     Manager.zipcode = zipcode
-    Manager.date = @date
+    Manager.date = date
   end
 
   def find_pages

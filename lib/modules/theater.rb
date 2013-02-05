@@ -39,7 +39,7 @@ module Theater
     showtime = BootlegShowtime.last
     showtime.showtimes = movie.showtimes.to_s.gsub(/-/, '').gsub(/\n/,'').strip
     showtime.zipcode = Manager.zipcode
-    showtime.date =  Time.parse(Manager.date) rescue Time.now
+    showtime.date =  Time.parse(Manager.date) rescue Time.now.beginning_of_day
     showtime.save
   end
 end

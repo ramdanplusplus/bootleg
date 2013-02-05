@@ -4,6 +4,7 @@ module Href
     if count
       count.times { |nr| pages << url + (nr + 1).to_s }
     end
+    pages.map{|page| p  page}
     pages
   end
 
