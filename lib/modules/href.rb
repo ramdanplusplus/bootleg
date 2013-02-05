@@ -15,7 +15,7 @@ module Href
   end
 
   def url
-    self.uri.to_s + '?page='
+    self.uri.to_s + "?selectedShowDate=#{Manager.date}&page="
   end
 end
 
